@@ -1,0 +1,220 @@
+/**********************************
+    Main
+***********************************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: large;
+}
+
+#leftColumn {
+    float: left;
+    width: 45%;
+    padding-left: 12.5%;
+}
+
+#middleColumn {
+    display: inline-block;
+}
+
+
+/**********************************
+    Password
+***********************************/
+
+.password {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.passwordText {
+    font-family: 'IBM Plex Mono', monospace;
+}
+td.passwordText {
+    width: 60px;
+}
+
+.memoryTable {
+    padding-left: 5%;
+}
+
+/**********************************
+    Miscellaneous
+***********************************/
+
+.inactive {
+    filter: grayscale(100%);
+}
+
+
+/**********************************
+    cardBlock
+***********************************/
+.cardBlock {
+    width: 120px;
+    height: 130px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+.cardBlock:hover {
+    transform: scale(1.025);
+}
+
+.cardBlockTitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #ededed;
+    color: #0366d6;
+}
+
+.cardBlockImage {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.cardBlockAges {
+    color: #5e599c;
+    padding-top: 22px;
+}
+.cardBlockAnimal {
+    color: #5e599c;
+    padding-top: 28px;
+}
+.cardBlockTall {
+    height: 160px;
+    margin: 20px 15px;
+}
+
+/**********************************
+    inputBlock
+***********************************/
+.inputBlock {
+    margin: 15px 50px;
+    text-align: left;
+}
+.inputBlock label {
+    display: block;
+}
+.inputBlock input, .inputBlock select {
+    padding: 8px 10px;
+}
+
+/**********************************
+    Footer
+***********************************/
+
+#expandFooter {
+    display: none;
+}
+#footer {
+    background-color: #222222;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+}
+#ringSection {
+    display: none;
+}
+
+
+/**********************************
+    Mobile
+***********************************/
+
+@media screen and (max-width: 1150px) {
+    #leftColumn {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        width: auto;
+        margin: auto;
+    }
+
+    #leftColumn {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+    #middleColumn {
+        display: initial;
+    }
+
+    #rightColumn {
+        float: none;
+        margin: 0 auto;
+        width: 300px;
+    }
+    #ringSection {
+        display: none;
+    }
+
+    .cardBlock {
+        width: 100px;
+        height: initial;
+    }
+    .cardBlockTall {
+        height: 160px;
+        margin: 20px 9px;
+        width: 90px;
+    }
+
+    #footer {
+        background-color: #222222;
+        color: white;
+        position: sticky;
+        bottom: -1px;
+        width: initial;
+        height: 120px;
+        right: initial;
+        top: initial;
+    }
+    .footerActive {
+        height: 400px !important;
+    }
+
+    .memoryTable {
+        padding-left: initial;
+        display: none;
+    }
+
+    .memoryTableActive {
+        display: initial !important;
+    }
+    #expandFooter {
+        display: block;
+        background-color: gray;
+        cursor: pointer;
+    }
+    #expandFooter:hover {
+        background-color: #9c9c9c;
+    }
+
+    .password {
+        padding: 10px 0 0 0;
+    }
+}
